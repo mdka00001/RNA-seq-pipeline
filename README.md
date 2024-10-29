@@ -42,7 +42,8 @@ The pipeline relies on Snakemake, Conda, and specific bioinformatics tools. To s
 The pipeline uses a `config.yaml` file to specify parameters like output directory, adapter sequences, accessions, reference genome, and other necessary inputs. Update `config.yaml` with paths and variables specific to your dataset and analysis requirements.
 
 ### Example `config.yaml`
-```accessions:
+```
+accessions:
   - ERR10949268
   - ERR10949270
   - ERR10949271
