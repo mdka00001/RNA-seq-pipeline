@@ -28,7 +28,7 @@ The pipeline relies on Snakemake, Conda, and specific bioinformatics tools. To s
 ### Steps
 1. Clone this repository:
     ```bash
-    git clone https://github.com/yourusername/your-repository-name.git
+    git clone https://github.com/yourusername/your-repository-name.git](https://github.com/mdka00001/RNA-seq-pipeline.git
     cd your-repository-name
     ```
 2. Install the required conda environment:
@@ -58,4 +58,23 @@ index: /data/karim_thesis/AD_organoids/Homo_sapiens.GRCh38.112.gtf
 output_dir: /data/karim_thesis/AD_organoids/forebrain_organoids_2/
 ```
 
+## USAGE
+Execute the entire pipeline with:
+```
+snakemake -s snakemake.py --cores <number_of_cores>
+snakemake -s snakemake_processing.py --cores <number_of_cores>
+snakemake -s snakemake_alignment.py --cores <number_of_cores>
+```
 
+## Output structure
+
+```
+output/
+├── rawSeq/             # Raw FASTQ files
+├── rawQC/              # Quality control results for raw reads
+├── trimmedSeq/         # Trimmed FASTQ files
+├── trimmedQC/          # Quality control results for trimmed reads
+├── aligned/            # BAM files of aligned reads
+└── featureCounts/      # Feature counts and summary files
+
+```
